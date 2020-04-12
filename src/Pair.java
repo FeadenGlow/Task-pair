@@ -1,7 +1,6 @@
 public class Pair<T, R> {
-    T first;
-    R second;
-    Pair pair;
+    private T first;
+    private R second;
 
     private Pair(T first, R second) {
         this.first = first;
@@ -15,7 +14,7 @@ public class Pair<T, R> {
     public R getSecond() {
         return second;
     }
-    public static Pair of(int first, String second){
+    public static <T, R> Pair of(T first, R second){
         return  new Pair(first, second);
     }
 
